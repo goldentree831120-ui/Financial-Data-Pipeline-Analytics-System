@@ -58,3 +58,72 @@ A Sharpe Ratio of 1.436 is well above the 1.0 threshold considered strong for a 
 - Cross-asset return correlation heatmap
 
 ---
+
+## Project Structure
+
+```
+financial-data-pipeline/
+│
+├── financial_data_pipeline.ipynb      # Main notebook
+├── requirements.txt                   # Python dependencies
+├── .gitignore                         # Git ignore rules
+├── README.md                          # This file
+└── assets/
+    └── dashboard.png                  # Visualization dashboard screenshot
+```
+
+---
+
+## Getting Started
+
+**1. Clone the repository**
+```bash
+git clone https://github.com/goldentree831120-ui/Financial-Data-Pipeline-Analytics-System
+.git
+cd financial-data-pipeline
+```
+
+**2. Install dependencies**
+```bash
+pip install -r requirements.txt
+```
+
+**3. Run the notebook**
+```bash
+jupyter lab financial_data_pipeline.ipynb
+```
+
+To use real market data instead of simulated data, replace the `simulate_ohlcv()` call with:
+```python
+import yfinance as yf
+data = {t: yf.download(t, period="2y") for t in tickers}
+```
+
+---
+
+## Requirements
+
+- Python 3.8+
+- numpy
+- pandas
+- matplotlib
+- seaborn
+- yfinance
+- jupyterlab
+
+Install all at once:
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## Tech Stack
+
+Python · NumPy · Pandas · Matplotlib · Seaborn · yfinance
+
+---
+
+## License
+
+MIT License. Free to use, modify, and distribute.
